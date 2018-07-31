@@ -7,14 +7,19 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
+         failOnRisky="true"
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Feature">
-            <directory suffix="Test.php">./tests/Feature</directory>
+            <directory>./tests/Feature</directory>
         </testsuite>
 
         <testsuite name="Unit">
-            <directory suffix="Test.php">./tests/Unit</directory>
+            <directory>./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="Koan">
+            <directory>./tests/Unit/Koan</directory>
         </testsuite>
     </testsuites>
     <filter>
