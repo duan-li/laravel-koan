@@ -21,3 +21,6 @@ Route::get('users', ['as' => 'users.index', 'uses' => 'UserController@index']);
 Route::redirect('users/home', 'users', 301);
 
 Route::view('users/welcome', 'welcome');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
